@@ -1,2 +1,4 @@
 # python
-Python Client &amp; CLI for LoadLab
+Python Client and CLI for LoadLab
+
+
