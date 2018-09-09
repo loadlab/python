@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from .loadlab import LoadLab
+
 """Top-level package for LoadLab."""
 
 __author__ = """@iMerica"""

@@ -3,15 +3,32 @@
 """Console script for loadlab."""
 import sys
 import click
+from loadlab import LoadLab
+
+
+@click.group()
+def main():
+    return 0
 
 
 @click.command()
-def main(args=None):
-    """Console script for loadlab."""
-    click.echo("Replace this message by putting your code into "
-               "loadlab.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
-    return 0
+def jobs():
+    click.echo(LoadLab().jobs.get())
+
+
+@click.command()
+def plans():
+    click.echo(LoadLab().plans.get())
+
+
+@click.command()
+def sites():
+    click.echo(LoadLab().sites.get())
+
+
+main.add_command(jobs)
+main.add_command(plans)
+main.add_command(sites)
 
 
 if __name__ == "__main__":

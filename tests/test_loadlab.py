@@ -1,27 +1,44 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for `loadlab` package."""
+"""Tests for `loadLab` package."""
 
 
 import unittest
 from click.testing import CliRunner
 
-from loadlab import loadlab
+from loadlab import LoadLab
 from loadlab import cli
+from unittest import mock
 
 
-class TestLoadlab(unittest.TestCase):
-    """Tests for `loadlab` package."""
+@mock.patch('loadlab.loadlab.Resource.get')
+class TestLoadlabClient(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
+        self.loadlab = LoadLab()
 
-    def tearDown(self):
-        """Tear down test fixtures, if any."""
+    def test_plans(self, get):
+        """Test plans """
+        get.return_value = {}
+        resp = self.loadlab.plans.get()
+        self.assertEqual(resp, {})
 
-    def test_000_something(self):
-        """Test something."""
+    def test_jobs(self, get):
+        """Test jobs """
+        get.return_value = {}
+        resp = self.loadlab.jobs.get()
+        self.assertEqual(resp, {})
+
+    def test_sites(self, get):
+        """Test sites """
+        get.return_value = {}
+        resp = self.loadlab.sites.get()
+        self.assertEqual(resp, {})
+
+
+class TestLoadlabCLI(unittest.TestCase):
 
     def test_command_line_interface(self):
         """Test the CLI."""

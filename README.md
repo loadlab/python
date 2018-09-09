@@ -1,4 +1,33 @@
-# python
-Python Client and CLI for LoadLab
+# Wrapper over the Python Requests library to talk to the LoadLab REST API.
+
+## Installation
+
+    $ pip install loadlab
+    
+## Usage
+
+```python
+from loadlab import LoadLab
+
+client = LoadLab(token='<YOUR TOKEN HERE>')
+
+# Get Jobs
+client.jobs.get()
+
+# Get Plans
+client.plans.get()
+
+# Get Sites
+client.sites.get()
+
+
+# Create new job
+# Refer to REST API Docs for support fields
+data = {...}
+client.jobs.create(data)
+
+```
+
+
 
 
