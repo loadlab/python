@@ -1,4 +1,6 @@
-# Wrapper over the Python Requests library to talk to the LoadLab REST API.
+## LoadLab Python
+
+A wrapper over the Python Requests library to talk to the LoadLab REST API.
 
 ## Installation
 
@@ -22,9 +24,9 @@ client.sites.get()
 
 
 # Create new job
-# Refer to REST API Docs for support fields
+# Refer to REST API Docs for supported fields
 data = {...}
-client.jobs.create(data)
+client.jobs.create(**data)
 
 ```
 
