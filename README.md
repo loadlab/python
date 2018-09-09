@@ -6,7 +6,7 @@ A wrapper over the Python Requests library to talk to the LoadLab REST API.
 
     $ pip install loadlab
     
-## Usage
+## Python Usage
 
 ```python
 from loadlab import LoadLab
@@ -29,7 +29,9 @@ data = {...}
 client.jobs.create(**data)
 
 ```
+## CLI Usage
 
+    $ loadlab --help
 
 
 
