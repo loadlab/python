@@ -31,6 +31,7 @@ client.jobs.create(**data)
 ```
 ## CLI Usage
 
+    $ export LOADLAB_API_TOKEN=<YOUR_API_TOKEN>
     $ loadlab --help
 
 
