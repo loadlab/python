@@ -1,6 +1,6 @@
 ## LoadLab Python
 
-A wrapper over the Python Requests library to talk to the LoadLab REST API.
+A CLI and wrapper over the Python Requests library to talk to the LoadLab REST API.
 
 ## Installation
 
