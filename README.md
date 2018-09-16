@@ -1,4 +1,5 @@
 ## LoadLab Python
+[![CircleCI](https://circleci.com/gh/loadlab/python.svg?style=svg)](https://circleci.com/gh/loadlab/python)
 
 A CLI and wrapper over the Python Requests library to talk to the LoadLab REST API.
 
