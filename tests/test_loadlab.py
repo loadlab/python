@@ -44,8 +44,8 @@ class TestLoadlabCLI(unittest.TestCase):
         """Test the CLI."""
         runner = CliRunner()
         result = runner.invoke(cli.main)
-        assert result.exit_code == 0
-        assert 'loadlab.cli.main' in result.output
+        self.assertEquals(result.exit_code, 0)
+        self.assertIn(' Show this message and exit', result.output)
         help_result = runner.invoke(cli.main, ['--help'])
-        assert help_result.exit_code == 0
-        assert '--help  Show this message and exit.' in help_result.output
+        self.assertEquals(help_result.exit_code, 0)
+        self.assertIn('--help  Show this message and exit.', help_result.output)
